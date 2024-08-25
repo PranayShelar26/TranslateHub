@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - TranslateHub</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--Font Awesome library-->
+    <script src="https://kit.fontawesome.com/56a441ee2c.js"></script>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg px-2 z-1 \" id="nav">
+      <a class="navbar-brand fw-semibold  " href="#header">TranslateHub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggle-icon fa fa-bars "></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end mx-4" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto " id="navitem">
+          <li class="nav-item  mx-lg-2"><a href="#header" class="nav-link">Home</a></li>
+          <li class="nav-item  mx-lg-2"><a href="index.html" class="nav-link" >Translator</a></li>
+          <li class="nav-item  mx-lg-2"><a href="#aboutus" class="nav-link" >About Us</a></li>
+          <li class="nav-item  mx-lg-2"><a href="#footer" class="nav-link" >Contact Us</a></li>
+        </ul>
+
+      </div>
+    </nav>
+    <header id="header" class="d-flex align-items-center justify-content-center z-0">
+      <div class="header text-center">
+          <div class="header-text">
+              <h1 id="name" class="underline">Translate Hub</h1>
+              <p id="slogan" class="px-2">Unlock your world with Translate Hub: Your gateway to global communication</p>
+              <button id="get-started" class="fw-light" onclick="window.location='index.html'">Get Started</button>
+          </div>
+      </div>
+  </header>
+    <div class="about text-lg-center " id="aboutus">
+      <h2 id="abt">TranslateHub: Your All-in-One Language Solution</h2>
+      <div class="flex mx-lg-5 px-lg-5">
+        <h3 id="abtus">About Us</h3>
+        <p id="p1">Welcome to TranslateHub, your ultimate destination for seamless language translation and
+          communication. Whether you're a global traveler, a language enthusiast, or a business expanding into new
+          markets, TranslateHub is here to break down language barriers and connect you with the world.</p>
+        <p id="p2">With TranslateHub, you can effortlessly translate text between dozens of languages with just a few
+          clicks. Our intuitive interface makes it easy to input text, select languages, and receive accurate
+          translations in an instant. Say goodbye to language barriers and hello to effortless communication.</p>
+        <p id="p3">Our commitment to quality and accuracy means you can trust TranslateHub for all your language needs.
+          Our advanced translation algorithms and extensive language databases ensure that you receive the most accurate
+          translations possible, every time.
+        </p>
+
+      </div>
+
+    </div>
+
+    <footer id="footer" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="first content">
+              <h2 id="followus">Follow Us</h2>
+              <p id="descriptionfollowus">Follow us on Facebook, Twitter, and Instagram to join the conversation, share
+                your language experiences, and discover new ways to break down barriers and connect with others. Whether
+                you're passionate about languages, curious about different cultures, or simply love to travel,
+                TranslateHub's social media channels are the perfect place to stay connected and inspired.on't miss out
+                on exclusive content, special offers, and exciting announcements – follow TranslateHub today and be part
+                of our growing community!"
+              </p>
+            </div>
+            <div class="social d-flex flex-row">
+              <a href="#"><i id="tr-icon" class="fab fa-twitter"></i></a>
+              <a href="#"><i id="fb-icon" class="fab fa-facebook-square"></i></a>
+              <a href="#"><i id="ig-icon" class="fab fa-instagram"></i></a>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <div class="second content">
+              <h2 id="contact">Contact Us</h2>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="msg" class="form-label">Message/Query</label>
+                <textarea class="form-control" id="msg" rows="3"></textarea>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn" id="btn1">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+      import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBu4Deeyyb690r7er6yvck5NU5eWLAZkuo",
+        authDomain: "translate-hub-f21a7.firebaseapp.com",
+        projectId: "translate-hub-f21a7",
+        storageBucket: "translate-hub-f21a7.appspot.com",
+        messagingSenderId: "48133748871",
+        appId: "1:48133748871:web:9564fc1e087ac645e4e022"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase(app);
+      document.getElementById("btn1").addEventListener('click', function (e) {
+        const emailInput = document.getElementById("email");
+        const messageInput = document.getElementById("msg");
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("msg").value.trim();
+
+        if (email && message) {
+          const path = `users/${email.replace(/[.#$[\]]/g, '')}`;
+
+          set(ref(db, path), {
+            email: email,
+            message: message
+          }).then(() => {
+            alert("Query successfully registered!");
+            emailInput.value = '';
+            messageInput.value = '';
+          }).catch((error) => {
+            alert("Error registering query:", error);
+          });
+        } else {
+          alert("Email or message is empty.");
+        }
+      });
+    </script>
+  </body>
+
+</html>
